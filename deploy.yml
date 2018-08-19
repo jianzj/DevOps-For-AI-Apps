@@ -8,3 +8,5 @@ spec:
      image: zjbootcamp.azurecr.io/model-api
      ports:
        - containerPort: 88
+ imagePullSecrets:
+   - name: zjacrkey
