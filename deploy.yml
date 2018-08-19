@@ -1,24 +1,13 @@
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: imageclassificationapp
-  labels:
-    app: imageclassificationapp
+ name: imageclassificationapp
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: imageclassificationapp
-  template:
-    metadata:
-      labels:
-        app: imageclassificationapp
-    spec:
-      containers:
-        - name: model-api
-          image: zjbootcamp.azurecr.io/model-api
-          ports:
-            - containerPort: 88
-      imagePullSecrets:
-        - name: zjacrkey
+ containers:
+   - name: model-api
+     image: zjbootcamp.azurecr.io/model-api
+     ports:
+       - containerPort: 88
+ imagePullSecrets:
+   - name: zjacrkey
