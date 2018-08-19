@@ -5,7 +5,7 @@ metadata:
 spec:
  containers:
    - name: model-api
-     image: zjbootcamp.azurecr.io/model-api:$(Build.BuildId)
+     image: zjbootcamp.azurecr.io/model-api
      ports:
        - containerPort: 88
  imagePullSecrets:
