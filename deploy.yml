@@ -19,7 +19,7 @@ metadata:
   labels:
     app: imageclassificationapp
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: imageclassificationapp
@@ -35,4 +35,3 @@ spec:
             - containerPort: 88
       imagePullSecrets:
         - name: zjacrkey
-####
